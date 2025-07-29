@@ -1,0 +1,57 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shape-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="shape-gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Floating geometric shapes -->
+  <circle cx="200" cy="300" r="80" fill="url(#shape-gradient-1)" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;20,-20;0,0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <rect x="1600" y="400" width="120" height="120" fill="url(#shape-gradient-2)" opacity="0.4" transform="rotate(45 1660 460)">
+    <animateTransform attributeName="transform" type="rotate" values="45 1660 460;225 1660 460;45 1660 460" dur="8s" repeatCount="indefinite"/>
+  </rect>
+  
+  <polygon points="300,800 400,650 500,800 400,950" fill="url(#shape-gradient-1)" opacity="0.3">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-15,15;0,0" dur="7s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <ellipse cx="1400" cy="200" rx="60" ry="100" fill="url(#shape-gradient-2)" opacity="0.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0;25,10;0,0" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Grid pattern overlay -->
+  <defs>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Subtle light effects -->
+  <radial-gradient id="light-1" cx="30%" cy="20%" r="40%">
+    <stop offset="0%" style="stop-color:rgba(255,255,255,0.2);stop-opacity:1" />
+    <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+  </radial-gradient>
+  <ellipse cx="600" cy="300" rx="400" ry="200" fill="url(#light-1)" opacity="0.6"/>
+  
+  <radial-gradient id="light-2" cx="70%" cy="80%" r="30%">
+    <stop offset="0%" style="stop-color:rgba(255,255,255,0.15);stop-opacity:1" />
+    <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+  </radial-gradient>
+  <ellipse cx="1400" cy="800" rx="300" ry="150" fill="url(#light-2)" opacity="0.4"/>
+</svg>

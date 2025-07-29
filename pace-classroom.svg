@@ -1,0 +1,127 @@
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ocean-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1445;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="earth-realistic" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0c4a6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </radialGradient>
+    <filter id="screen-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Photo-realistic space background -->
+  <rect width="400" height="250" fill="url(#ocean-bg)" rx="8"/>
+  
+  <!-- Stars -->
+  <circle cx="50" cy="30" r="1" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="25" r="0.5" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="35" r="1" fill="white" opacity="0.9"/>
+  <circle cx="320" cy="40" r="0.5" fill="white" opacity="0.7"/>
+  <circle cx="380" cy="60" r="1" fill="white" opacity="0.8"/>
+  
+  <!-- Realistic Earth -->
+  <circle cx="120" cy="100" r="45" fill="url(#earth-realistic)"/>
+  <!-- Realistic continents -->
+  <path d="M95 85 Q110 80 125 85 L135 95 Q130 110 120 115 L105 110 Q95 100 95 85" fill="rgba(16,185,129,0.8)"/>
+  <path d="M130 120 Q140 115 145 125 L140 140 Q130 135 125 130 Z" fill="rgba(16,185,129,0.7)"/>
+  <path d="M85 110 Q95 105 105 110 L100 125 Q90 120 85 110" fill="rgba(16,185,129,0.6)"/>
+  <!-- Clouds -->
+  <ellipse cx="110" cy="90" rx="8" ry="4" fill="rgba(255,255,255,0.3)" opacity="0.7"/>
+  <ellipse cx="135" cy="110" rx="6" ry="3" fill="rgba(255,255,255,0.3)" opacity="0.6"/>
+  
+  <!-- PACE Satellite orbit path -->
+  <circle cx="120" cy="100" r="65" fill="none" stroke="rgba(59,130,246,0.4)" stroke-width="1" stroke-dasharray="3,3">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Realistic PACE Satellite -->
+  <g transform="translate(185,100)">
+    <!-- Satellite body -->
+    <rect x="-12" y="-8" width="24" height="16" fill="rgba(200,200,200,0.9)" rx="2"/>
+    <rect x="-10" y="-6" width="20" height="12" fill="rgba(50,50,80,0.8)" rx="1"/>
+    <!-- Solar panels -->
+    <rect x="-20" y="-4" width="8" height="8" fill="rgba(30,30,150,0.9)"/>
+    <rect x="12" y="-4" width="8" height="8" fill="rgba(30,30,150,0.9)"/>
+    <!-- Antenna -->
+    <rect x="-2" y="-12" width="4" height="4" fill="rgba(255,200,0,0.9)"/>
+    <line x1="0" y1="-12" x2="0" y2="-16" stroke="white" stroke-width="1"/>
+    <!-- Orbit animation -->
+    <animateTransform attributeName="transform" type="rotate" values="0 120 100;360 120 100" dur="15s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- Educational interface screen -->
+  <rect x="220" y="50" width="160" height="140" fill="rgba(15,15,15,0.95)" rx="12" stroke="rgba(59,130,246,0.5)" stroke-width="1" filter="url(#screen-glow)"/>
+  
+  <!-- Screen header -->
+  <rect x="225" y="55" width="150" height="25" fill="rgba(59,130,246,0.2)" rx="6"/>
+  <circle cx="235" cy="67" r="3" fill="rgba(239,68,68,0.8)"/>
+  <circle cx="245" cy="67" r="3" fill="rgba(245,158,11,0.8)"/>
+  <circle cx="255" cy="67" r="3" fill="rgba(34,197,94,0.8)"/>
+  <text x="270" y="72" fill="white" font-size="11" font-weight="bold">PACE Ocean Data</text>
+  
+  <!-- Real-time ocean data visualization -->
+  <text x="230" y="95" fill="rgba(59,130,246,0.9)" font-size="10" font-weight="bold">Live Ocean Monitoring</text>
+  
+  <!-- Temperature data -->
+  <rect x="230" y="105" width="80" height="4" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="230" y="105" width="60" height="4" fill="rgba(239,68,68,0.8)" rx="2"/>
+  <text x="320" y="110" fill="white" font-size="8">Temp: 24.5°C</text>
+  
+  <!-- Chlorophyll levels -->
+  <rect x="230" y="120" width="80" height="4" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="230" y="120" width="70" height="4" fill="rgba(34,197,94,0.8)" rx="2"/>
+  <text x="320" y="125" fill="white" font-size="8">Chlor: 0.8 mg/m³</text>
+  
+  <!-- pH levels -->
+  <rect x="230" y="135" width="80" height="4" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="230" y="135" width="55" height="4" fill="rgba(59,130,246,0.8)" rx="2"/>
+  <text x="320" y="140" fill="white" font-size="8">pH: 8.1</text>
+  
+  <!-- Interactive learning modules -->
+  <rect x="230" y="150" width="140" height="35" fill="rgba(255,255,255,0.05)" rx="4"/>
+  <text x="235" y="163" fill="rgba(245,158,11,0.9)" font-size="9" font-weight="bold">Learning Modules Active:</text>
+  <circle cx="240" cy="170" r="2" fill="rgba(34,197,94,0.8)"/>
+  <text x="248" y="174" fill="white" font-size="8">Ocean Carbon Cycle</text>
+  <circle cx="240" cy="178" r="2" fill="rgba(34,197,94,0.8)"/>
+  <text x="248" y="182" fill="white" font-size="8">Marine Ecosystems</text>
+  
+  <!-- Students engaged (bottom section) -->
+  <rect x="20" y="200" width="360" height="35" fill="rgba(255,255,255,0.08)" rx="8"/>
+  <text x="30" y="215" fill="rgba(59,130,246,0.9)" font-size="11" font-weight="bold">Global Classroom Impact</text>
+  
+  <!-- Student avatars -->
+  <circle cx="40" cy="230" r="6" fill="rgba(245,158,11,0.8)"/>
+  <text x="30" y="235" fill="white" font-size="6">USA</text>
+  
+  <circle cx="80" cy="230" r="6" fill="rgba(34,197,94,0.8)"/>
+  <text x="72" y="235" fill="white" font-size="6">India</text>
+  
+  <circle cx="120" cy="230" r="6" fill="rgba(239,68,68,0.8)"/>
+  <text x="110" y="235" fill="white" font-size="6">Brazil</text>
+  
+  <circle cx="160" cy="230" r="6" fill="rgba(59,130,246,0.8)"/>
+  <text x="150" y="235" fill="white" font-size="6">Japan</text>
+  
+  <!-- Statistics -->
+  <text x="220" y="225" fill="white" font-size="10">2,847 Students Online</text>
+  <text x="220" y="237" fill="rgba(255,255,255,0.7)" font-size="9">45 Countries • 12 Languages</text>
+  
+  <!-- Data transmission beams -->
+  <path d="M120 145 Q170 160 220 170" stroke="rgba(59,130,246,0.6)" stroke-width="2" fill="none" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M120 155 Q170 170 220 180" stroke="rgba(34,197,94,0.6)" stroke-width="1" fill="none" opacity="0.5">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
+  </path>
+</svg>
